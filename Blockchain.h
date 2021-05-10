@@ -18,5 +18,7 @@ public:
 	void addBlock(Block new_block);
 
 	int getSize();
+
+	void addTransactionData();
 	
 };

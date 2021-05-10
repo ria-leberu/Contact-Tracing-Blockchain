@@ -5,25 +5,18 @@
 void showMenu() {
 	std::cout << "**********Blockchain***********" << std::endl;
 	std::cout << "1. Set Transaction Data (Add New Block)" << std::endl;
-	std::cout << "2. View Blockchain Data" << std::endl;
+	std::cout << "2. View Blockchain Data" << std::endl << std::endl;;
+	std::cout << "0. Exit" << std::endl;
+	
 	std::cout << "*******************************" << std::endl;
 }
 
-void addTransactionData(Blockchain block_chain) {
-	std::string new_block_data;
-	std::cout << "Please enter transaction data: " << std::endl;
-	std::cin >> new_block_data;
-	
-	block_chain.addBlock(Block(1, "new_block_data"));
-
-}
 
 int main() {
 	Blockchain nChain = Blockchain();
 
 
-	int user_option = 0;
-	
+	int user_option = 99;
 
 	do {
 
@@ -34,10 +27,13 @@ int main() {
 
 		switch (user_option) {
 		case 1:
-			addTransactionData(nChain);
+			nChain.addTransactionData();
 			break;
 		case 2:
 			nChain.viewBlockchain();
+			break;
+		
+		case 0:
 			break;
 		default:
 			std::cout << "Invalid Command." << std::endl;
@@ -45,7 +41,7 @@ int main() {
 		}
 
 
-	} 	while (user_option != 4);
+	} 	while (user_option != 0);
 
 	
 
