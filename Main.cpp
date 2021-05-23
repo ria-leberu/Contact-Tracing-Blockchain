@@ -4,8 +4,9 @@
 
 void showMenu() {
 	std::cout << "**********Blockchain***********" << std::endl;
-	std::cout << "1. Set Transaction Data (Add New Block)" << std::endl;
-	std::cout << "2. View Blockchain Data" << std::endl << std::endl;;
+	std::cout << "1. Add New Patient" << std::endl;
+	std::cout << "2. Add 10 New Patients" << std::endl;
+	std::cout << "3. View Blockchain Data" << std::endl << std::endl;;
 	std::cout << "0. Exit" << std::endl;
 	
 	std::cout << "*******************************" << std::endl;

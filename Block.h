@@ -3,16 +3,13 @@
 
 class Block {
 	
-	//block number
-	
-	
+
 	int nonce;
 
 	//information regarding transaction
 	std::string transaction_data;
 
 	//hash information
-	
 	std::string block_hash;
 
 	//hash calculation
