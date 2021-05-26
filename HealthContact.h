@@ -21,6 +21,9 @@ public:
 
 	std::string contact_id; //merges name and contact phone number
 
-	std::string getHealthData(); //string for block hash generation
+	void displayAllHealthData();
 
+	std::string getHealthDataHash(); //string for block hash generation
+
+	bool getNotificationStatus(std::string);
 };
