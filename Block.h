@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "HealthContact.h"
 
 class Block {
 	
@@ -7,9 +8,11 @@ class Block {
 	int nonce;
 
 	//information regarding transaction
-	std::string transaction_data;
+	//std::string transaction_data;
+	HealthContact health_contact;
 
 	//hash information
+	
 	std::string block_hash;
 
 	//hash calculation
@@ -20,8 +23,8 @@ class Block {
 
 		std::string block_previous_hash;
 		std::string getBlockHash();
-		std::string getTransactionInfo();
+		void getHealthInfo();
 
-		Block(int block_number_input, std::string data_input);
+		Block(int block_number_input, HealthContact data_input);
 		void mineBlock();
 };

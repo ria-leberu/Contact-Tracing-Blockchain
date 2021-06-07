@@ -2,10 +2,10 @@
 #include "sha256.h"
 #include <iostream>
 
-Block::Block(int block_number_input, std::string data_input) {
+Block::Block(int block_number_input, HealthContact data_input) {
 	nonce = 0;
 	block_number = block_number_input;
-	transaction_data = data_input;
+	health_contact = data_input;
 	block_hash = calculateHash();
 }
 
@@ -13,12 +13,12 @@ std::string Block::getBlockHash() {
 	return block_hash;
 }
 
-std::string Block::getTransactionInfo() {
-	return transaction_data;
+void Block::getHealthInfo() {
+	return health_contact.displayAllHealthData();
 }
 
 std::string Block::calculateHash() {
-	std::string full_hash_string = std::to_string(block_number) + std::to_string(nonce) + transaction_data + block_previous_hash;
+	std::string full_hash_string = std::to_string(block_number) + std::to_string(nonce) + health_contact.getHealthDataHash() + block_previous_hash;
 	return sha256(full_hash_string);
 }
 

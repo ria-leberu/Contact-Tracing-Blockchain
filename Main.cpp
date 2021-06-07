@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 #include "Block.h"
 #include "Blockchain.h"
 
@@ -14,6 +15,7 @@ void showMenu() {
 
 
 int main() {
+	srand(time(NULL));
 	Blockchain nChain = Blockchain();
 
 
@@ -28,9 +30,14 @@ int main() {
 
 		switch (user_option) {
 		case 1:
-			nChain.addTransactionData();
+			nChain.addNewHealthContact();
 			break;
 		case 2:
+			for (int i = 0; i < 10; ++i) {
+				nChain.addNewHealthContact();
+			}
+			break;
+		case 3:
 			nChain.viewBlockchain();
 			break;
 		

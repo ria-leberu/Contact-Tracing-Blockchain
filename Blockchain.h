@@ -19,6 +19,6 @@ public:
 
 	int getSize();
 
-	void addTransactionData();
+	void addNewHealthContact();
 	
 };

@@ -5,7 +5,7 @@
 class HealthContact {
 
 	bool notified; //has the contact been notified of exposure?
-	int contact_number; //phone number
+	std::string contact_number; //phone number
 	std::string name;
 	std::string infection_status; //positive, negative
 	std::string dx_date; //date diagnosed
@@ -20,9 +20,10 @@ public:
 
 	HealthContact();
 	std::string contact_id; //merges name and contact phone number
+	std::string getInfectionStatus();
 	void displayAllHealthData();
 	void setNotified(bool);
-	void setContactNumber(int);
+	void setContactNumber(std::string);
 	void setName(std::string);
 	void setInfectionStatus(std::string);
 	void setDx_date(std::string);
